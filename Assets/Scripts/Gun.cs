@@ -24,15 +24,20 @@ public class GunElement
 }
 public class Gun : MonoBehaviour
 {
-        [SerializeField] private GunElement _handGun;    
+    [SerializeField] private GunElement _handGun;    
     private Transform _camera;
-     //Start is called once before the first execution of Update after the MonoBehaviour is created
+    private float shootTimer;   
     void Start()
     {
         _camera = Camera.main.transform;
+        shootTimer = _handGun.ShootRate;    
     }
     void Update()
     {
+        shootTimer += Time.deltaTime;
+        if(shootTimer < _handGun.ShootRate)
+            return;
+
         //verifica se o plauyer atirou
         if (!Input.GetButtonDown("Fire1"))
             return;
@@ -46,5 +51,6 @@ public class Gun : MonoBehaviour
 
         shootable.Hitted(1, target.point);
 
+        shootTimer = 0;
     }
 }
