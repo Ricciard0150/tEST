@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72453b55b90619498b20af5c76f8403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gun
-  _gunElement:
+  _handGun:
     _damage: 0
     _shootRate: 0
     _ammunation: 0
@@ -1260,7 +1260,7 @@ GameObject:
   - component: {fileID: 3620356314605459247}
   - component: {fileID: 788445582}
   m_Layer: 6
-  m_Name: Box_350x300x250_Prefab (1)
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
