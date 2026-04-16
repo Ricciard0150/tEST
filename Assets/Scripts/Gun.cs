@@ -1,7 +1,30 @@
 using UnityEngine;
 
+[System.Serializable]
+public class GunElement 
+{
+
+    [SerializeField] private float _damage;
+    [SerializeField] private float _shootRate;
+    [SerializeField] private float _ammunation;
+    [SerializeField] private string _name;
+
+    public GunElement(float damage, float shootRate, float ammunation, string name)
+    {
+        _damage = damage;
+        _shootRate = shootRate;
+        _ammunation = ammunation;
+        _name = name;
+    }
+
+    public string Name { get => _name;}
+    public float ShootRate { get => _shootRate;}
+    public float Ammunation { get => _ammunation;}
+    public float Damage { get => _damage; }
+}
 public class Gun : MonoBehaviour
 {
+        [SerializeField] private GunElement _handGun;    
     private Transform _camera;
      //Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +44,7 @@ public class Gun : MonoBehaviour
         if (!target.collider.TryGetComponent(out IShootable shootable))
             return;
 
-        shootable.Hitted(1);
+        shootable.Hitted(1, target.point);
 
     }
 }
