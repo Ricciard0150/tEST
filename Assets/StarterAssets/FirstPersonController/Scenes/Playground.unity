@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStatus
   _bloodEffect: {fileID: 4940906620536837116, guid: fd748677e706d8b4fa03d773e156192c, type: 3}
-  _lifeMax: 3
+  _lifeMax: 5
 --- !u!1 &874605735
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,8 +623,9 @@ MonoBehaviour:
   _handGun:
     _damage: 1
     _shootRate: 0.5
-    _ammunation: 0
+    _ammunation: 5
     _name: Pistol
+    clipSize: 5
 --- !u!1 &1659608549
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +653,7 @@ RectTransform:
   m_GameObject: {fileID: 1659608549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1874063551}
