@@ -48,7 +48,7 @@ public class GunSystem : MonoBehaviour
             return;
 
         //Aciona o método do contrato IShootable
-        shootable.Hitted(1, target.point);
+        shootable.Hitted(_handGun.Damage, target.point);
         _shootTimer = 0;
     }
     IEnumerator Reload()

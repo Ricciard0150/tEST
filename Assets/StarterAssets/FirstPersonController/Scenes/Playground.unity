@@ -683,6 +683,7 @@ GameObject:
   - component: {fileID: 1386512477}
   - component: {fileID: 1386512476}
   - component: {fileID: 1386512481}
+  - component: {fileID: 1386512482}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Gun
@@ -736,8 +737,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.014401, y: 0.99946237, z: 0.4239932}
+  m_Center: {x: -0.0072002406, y: 0.0002688168, z: 0.28800362}
 --- !u!23 &1386512478
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -840,9 +841,30 @@ MonoBehaviour:
     _name: Gommmm
     _damage: 5
     _shootRate: 10
-    _ammunation: 1
+    _ammunation: 367
     _clipSize: 1
     _reloadTime: 1
+--- !u!135 &1386512482
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386512475}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.8887591
+  m_Center: {x: 8.5400836e-10, y: -3.8353296e-11, z: -0.97189856}
 --- !u!1 &1764214107
 GameObject:
   m_ObjectHideFlags: 0
