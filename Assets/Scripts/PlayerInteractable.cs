@@ -6,7 +6,7 @@ public class PlayerInteractable : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        _gunSystem = GetComponent<GunSystem>();
+        _gunSystem = GetComponentInParent<GunSystem>();
     }
 
     // Update is called once per frame
@@ -14,12 +14,13 @@ public class PlayerInteractable : MonoBehaviour
     {
 
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!collision.gameObject.TryGetComponent(out ICollectable collectable))
+        if (!other.gameObject.TryGetComponent(out ICollectable collectable))
         return;
 
-        _gunSystem.AddNewGun(collectable.Collect());
+        _gunSystem.AddNewGun((GunElement)collectable.Collect());
+        print("colliding");
     }
 }
 

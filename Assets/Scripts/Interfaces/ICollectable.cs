@@ -2,6 +2,6 @@ using UnityEngine;
 
 public interface ICollectable
 {
-    public abstract GunElement Collect();
+    public abstract Element Collect();
 }
 

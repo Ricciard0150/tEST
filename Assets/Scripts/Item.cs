@@ -3,10 +3,8 @@ using UnityEngine;
 
 public abstract class Item : MonoBehaviour, ICollectable
 {
-    public GunElement Collect()
-    {
-        throw new System.NotImplementedException();
-    }
+    public abstract Element Collect();
+
 
     //metodos abstgratos
     //força os fihlos a implementarem
